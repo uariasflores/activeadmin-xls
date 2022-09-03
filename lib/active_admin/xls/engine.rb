@@ -17,7 +17,7 @@ module ActiveAdmin
       
       ActiveSupport.on_load(:active_admin_controller) do
         # Source | https://github.com/activeadmin/activeadmin/issues/7196#issuecomment-1132578565
-        ActiveAdmin::ResourceController.send(
+        ActiveAdmin::BaseController.send(
           :prepend,
           ActiveAdmin::Xls::ResourceControllerExtension
         )        
